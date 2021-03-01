@@ -73,7 +73,7 @@ end subrotine dizer_bomDia
 ~~~
 #### Operadores
 
-Operador Aritmético
+|Operador Aritmético|
 |Operador   |Equivalente    | 
 |---        |---            |
 | +         | Soma          |
