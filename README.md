@@ -1,5 +1,5 @@
 # Fortran
-Repositório com estudos sobre a linguagem FORTRAN
+Repositório com estudos realizados sobre a linguagem FORTRAN.
 
 ## Anotações
 
@@ -12,5 +12,16 @@ Repositório com estudos sobre a linguagem FORTRAN
 - [Tutorials Point](https://www.tutorialspoint.com/fortran/fortran_loops.htm)
 - [Francisco Carlos Lavarda](http://wwwp.fc.unesp.br/~lavarda/fc1/apo/fort_09.htm)
 - [Hans Rogério](https://github.com/zrhans/Fortran)
+
+# Sintaxe
+'
+program program_name
+implicit none      
+
+    ! declaração de tipos e variáveis
+    ! instruções executáveis
+
+end program program_name
+'
 
 
