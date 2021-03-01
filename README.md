@@ -112,6 +112,8 @@ end subrotine dizer_bomDia
 |atan2(x)   |arco tangente: intervalo (-pi , pi)    |
 |log(x)     |logaritmo Natural (base e)             |
 |log10(x)   |logaritmo         (base 10)            |
-|exp()      |retorna o expoente do número           |
+|exp(x)      |retorna o expoente do número          |
+
+continuar em: https://www.tutorialspoint.com/fortran/fortran_intrinsic_functions.htm
 
 
