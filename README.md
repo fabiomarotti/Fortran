@@ -14,10 +14,12 @@ Repositório com estudos realizados sobre a linguagem FORTRAN.
 - [Hans Rogério](https://github.com/zrhans/Fortran)
 
 # Sintaxe
-'program program_name
-implicit none      
+```
+program program_name 
+    implicit none      
     ! declaração de tipos e variáveis
     ! instruções executáveis
-end program program_name'
+end program program_name
+```
 
 
