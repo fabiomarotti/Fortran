@@ -53,11 +53,14 @@ end subrotine dizer_bomDia
     integer(kind=16)
     
     real                :: salario 
-    double precision    :: me 
+    double precision    :: media 
     
     complex             :: num_complexo  
     logical             :: logico 
     character(len = 80) :: texto
+    
+    texto = "abcdef"
+    print*, texto(1:3) ! escreve abc
     
     ! função kind(variavel)
     ! informa o tipo da variavel
@@ -65,11 +68,31 @@ end subrotine dizer_bomDia
     ! função huge(variavel)
     ! mostrar maior número mantido pela variavel
     
-    texto = "abcdef"
-    print*, texto(1:3) ! escreve abc
-    
     ! função trim(texto)
     ! exclui espaço em branco no meio do texto
 ~~~
 
+#### Livrarias
+~~~Fortran
+    RANDLIB, random number and statistical distribution generators
+    BLAS
+    EISPACK
+    GAMS–NIST Guide to Available Math Software
+    Some statistical and other routines from NIST
+    LAPACK
+    LINPACK
+    MINPACK
+    MUDPACK
+    NCAR Mathematical Library
+    The Netlib collection of mathematical software, papers, and databases.
+    ODEPACK
+    ODERPACK, a set of routines for ranking and ordering.
+    Expokit for computing matrix exponentials
+    SLATEC
+    SPECFUN
+    STARPAC
+    StatLib statistical library
+    TOMS
+    Sorting and merging strings
+~~~
 
