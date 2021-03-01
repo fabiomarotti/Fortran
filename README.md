@@ -71,6 +71,49 @@ end subrotine dizer_bomDia
     ! função trim(texto)
     ! exclui espaço em branco no meio do texto
 ~~~
+#### Operadores
+
+Operador Aritmético
+|Operador   |Equivalente    | 
+|---        |---            |
+| +         | Soma          |
+| -         | Subtração     |
+| *         | Multiplicação |
+| /         | Divisão       |
+| **        | Potencia      |
+
+Operador Relacional
+|Operador   |Equivalente    | Descrição     |
+|---        |---            |---            |
+| ==        | .EQ.          | Igualdade     |
+| /=        | .NE.          | Diferente     |
+| >         | .GT.          | Maior que     |
+| <         | .IT.          | Menor que     |
+| >=        | .GE.          | Maior igual   |
+| <=        | .LE.          | Menor igual   |
+
+Operador Lógico
+|Operador   |Descrição      | 
+|---        |---            |
+| .AND.     |  E            |
+| .OR.      | OU            |
+| .NOT.     | Não           |
+| .EQV.     | Equivalência entre dois operadores lógicos     |
+| .NEQV.    | Não Equivalência entre dois operadores lógicos |
+
+Precedencia dos Operadores
+|Categoria                      |Operador          | Associativa              |
+|---                            |---                |---                      |
+| Não lógico e sinal negativo   | .NOT. , (-)       | Esquerda para direita   |
+| Expoente                      | **                | Esquerda para direita   |
+| Multiplicação, Divisão        | * , /             | Esquerda para direita   |
+| Adição, Subtração             | + , -             | Esquerda para direita   |
+| Relacional                    | < , <= , > , >=   | Esquerda para direita   |
+| Igualdade, Desigualdade       | == , /=           | Esquerda para direita   |
+| E lógico                      | .AND.             | Esquerda para direita   |
+| OU lógico                     | .OR.              | Esquerda para direita   |
+| Atribuição                    | =                 | Direita para esquerda   |
+
 
 #### Entrada/Saída (I/O)
 ~~~Fortran
