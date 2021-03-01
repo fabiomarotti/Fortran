@@ -96,7 +96,7 @@ end subrotine dizer_bomDia
 ~~~  
 * Funções de Manipulações das Matrizes
 ~~~Fortran
-real, dimension(1:6) :: a = (/ 21.0, 22.0, 23.0, 24.0, 25.0, 26.0 /)
+   real, dimension(1:6) :: a = (/ 21.0, 22.0, 23.0, 24.0, 25.0, 26.0 /)
    real, dimension(1:6) :: x, y
    write(*,10) a
    
@@ -113,7 +113,10 @@ real, dimension(1:6) :: a = (/ 21.0, 22.0, 23.0, 24.0, 25.0, 26.0 /)
    write(*,10) y
    
    10 format(1x,6f6.1)
+   
+   
 ~~~ 
+
 * Funçoes de Localização para Arrays
 ~~~Fortran
    real, dimension(1:6) :: a = (/ 21.0, 12.0,33.0, 24.0, 15.0, 16.0 /)
@@ -226,6 +229,38 @@ Formatação
         print 200, nome,   idade,     nascimento
 200     format(1x,    a, 2x,  i3, 2x,       f5.2)  
 
+~~~
+
+
+#### Estruturas de Decisão
+~~~Fortran
+! Estrtrutura IF - THEN - ELSE - END IF
+if (x > 2) then
+       ! fazer01
+    else if(x > 8) then
+       ! fazer02
+    else if (x > 10) then
+       ! fazer03
+    end if
+
+! com nome    
+gr: if( x>2 ) then
+       !fazer01
+    enf if gr
+    
+select case(nota)
+    case(10)
+    ! faça para 10
+    
+    case(5 : 9)
+    ! faça para entre 5 e 9
+    
+    case(:4)
+    ! faça para menor que 4
+    
+    case default
+    ! faça caso contrario
+end select
 ~~~
 
 #### Livrarias
