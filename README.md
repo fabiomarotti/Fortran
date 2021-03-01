@@ -96,3 +96,9 @@ end subrotine dizer_bomDia
     Sorting and merging strings
 ~~~
 
+#### Funções Intrinsicas
+
+| função | Descrição |
+|---|---|
+|abs(x)| media|
+
