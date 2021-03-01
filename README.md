@@ -299,7 +299,8 @@ end select
 
 
 #### Funções e Procedimentos
-* Intenção dos Argumento
+* Intenção dos Argumentos
+
 | Valor | Como usa      | Descrição                 |
 |---    |---            |---                        |
 | in    | intent(in)    |não altera dentro da função|
@@ -333,6 +334,7 @@ end subroutine calcular_discriminante
 ~~~
 
 * Procedimentos Interno (ao código)
+Obs.: Alterar os valores dentro do procedimento (x,y), implica em alterar o conteudo das variaveis utilizadas nos argumentos (a,b) 
 ~~~Fortran
 program meu_programa
     implicit none
