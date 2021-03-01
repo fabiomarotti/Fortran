@@ -89,11 +89,12 @@ end subrotine dizer_bomDia
    real, dimension(3,2) :: a 
    a = reshape( (/5,9,6,10,8,12/), (/3,2/) ) 
    
-   Print *, lbound(a, dim = 1)  ! retorna o limite superior da dimensão, sem dim: retorna vetor inteiro
+   Print *, lbound(a, dim = 1)  ! retorna o limite superior, sem dim: retorna vetor inteiro
    Print *, ubound(a, dim = 1)  ! retorna o limite inferior da dimensão (pode ser negativo)
    Print *, shape(a)            ! dimensão da matriz
    Print *, size(a,dim = 1)     ! número elementos da determinada dimensão
 ~~~  
+
 * Funções de Manipulações das Matrizes
 ~~~Fortran
    real, dimension(1:6) :: a = (/ 21.0, 22.0, 23.0, 24.0, 25.0, 26.0 /)
@@ -124,7 +125,7 @@ end subrotine dizer_bomDia
    Print *, minloc(a)       ! retorna a posição do mínimo local :2
 ~~~
 
-#### Tipos (Estrutura, Classe)
+#### Tipos (Estrutura / Classe)
 ~~~Fortran
 ! Declaração
 type    Pessoa
@@ -150,7 +151,7 @@ listaPessoas(2)%idade   = 38
 ~~~
 #### Operadores
 
-Operador Aritmético
+* Operador Aritmético
 |Operador   |Equivalente    | 
 |---        |---            |
 | +         | Soma          |
@@ -159,7 +160,7 @@ Operador Aritmético
 | /         | Divisão       |
 | **        | Potencia      |
 
-Operador Relacional
+* Operador Relacional
 |Operador   |Equivalente    | Descrição     |
 |---        |---            |---            |
 | ==        | .EQ.          | Igualdade     |
@@ -169,7 +170,7 @@ Operador Relacional
 | >=        | .GE.          | Maior igual   |
 | <=        | .LE.          | Menor igual   |
 
-Operador Lógico
+* Operador Lógico
 |Operador   |Descrição      | 
 |---        |---            |
 | .AND.     |  E            |
@@ -199,6 +200,7 @@ write(*,*) "Ola Mundo", x
 print *, "Ola Mundo", x
 ~~~
 
+* Formatação
 ~~~Fortran
 read    fmt, variavel
 print   fmt, variavel
@@ -220,8 +222,6 @@ write   fmt, variavel
 ! pula linha, 3 espaços, "texto", inteiros, 3 espaços, "texto", real
 ~~~
 
-Formatação
-
 ~~~Fortran
         print 100
 100     format (7x,'Nome:', 7x, 'Idade:', 1x, 'Nascimento:')
@@ -237,17 +237,17 @@ Formatação
 ~~~Fortran
 ! Estrtrutura IF - THEN - ELSE - END IF
 if (x > 2) then
-       ! fazer01
-    else if(x > 8) then
-       ! fazer02
-    else if (x > 10) then
-       ! fazer03
-    end if
+    ! fazer01
+else if(x > 8) then
+    ! fazer02
+else if (x > 10) then
+    ! fazer03
+end if
 
-! com nome    
-gr: if( x>2 ) then
+! com rótulo: gr    
+gr: if(x > 2) then
        !fazer01
-    enf if gr
+    end if gr
 ~~~
 
 * SELECT CASE
@@ -275,7 +275,7 @@ end select
     end do
     
     ! DO WHILE
-    do while( x>2 )
+    do while(x > 2)
         ! faça
     end do
     
@@ -318,7 +318,7 @@ end select
 #### Funções Intrinsicas
 
 | Função    | Descrição do retorno :: (radianos)    |
-|---        |---            |
+|---        |---                                    |
 |sin(x)     | seno                                  |
 |sinh(x)    |seno hiperbolico                       |
 |asin(x)    |arco seno: intervalo (-pi/2 , pi/2)    |
