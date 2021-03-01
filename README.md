@@ -72,6 +72,45 @@ end subrotine dizer_bomDia
     ! exclui espaço em branco no meio do texto
 ~~~
 
+#### Entrada/Saída (I/O)
+~~~Fortran
+read(*,*) x
+write(*,*) "Ola Mundo", x
+print *, "Ola Mundo", x
+~~~
+
+~~~Fortran
+read    fmt, variavel
+print   fmt, variavel
+write   fmt, variavel
+~~~
+
+|Descritor  |Descrição          |Exemplo                |
+|---        |---                |---                    |
+|i          |inteiros           | print "(3i5)", x      |
+|f          |real               | print "(f12.3)", x    |
+|e          |expoencial         | print "(e10.3)" ,123456.0 gives ‘0.123e+06’ |
+|es         |notação cientifica | print "(es10.3)",123456.0 gives ‘1.235e+05’ |
+|a          |caracteres         | print "(a10)", str        |
+|x          |criar espaço (5x)  | print "(  5x, a10)",  str |
+| /         |linha em branco    | print "(/,5x, a10)", str  |
+
+~~~Fortran
+ print '( / , 3x , "n = " , i6 , 3x , "d = " , f7.4 )', n, d
+! pula linha, 3 espaços, "texto", inteiros, 3 espaços, "texto", real
+~~~
+
+Formatação
+
+~~~Fortran
+        print 100
+100     format (7x,'Nome:', 7x, 'Idade:', 1x, 'Nascimento:')
+
+        print 200, nome,   idade,     nascimento
+200     format(1x,    a, 2x,  i3, 2x,       f5.2)  
+
+~~~
+
 #### Livrarias
 ~~~Fortran
     RANDLIB, random number and statistical distribution generators
