@@ -16,10 +16,8 @@ Repositório com estudos realizados sobre a linguagem FORTRAN.
 # Sintaxe
 '''program program_name
 implicit none      
-
     ! declaração de tipos e variáveis
     ! instruções executáveis
-
 end program program_name'''
 
 
