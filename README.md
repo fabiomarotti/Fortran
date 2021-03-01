@@ -21,20 +21,26 @@ program nome_programa
     implicit none 
     
     ! declaração de tipos e variáveis
-    integer x, y
+    character(len=20) :: nome
+    integer           :: x, y, somado
     
     ! instruções executáveis
-    call somar(x,y)
+    call dizer_bomDia(nome)     ! chamada de procedimento
+    somado = somar(x,y)         ! chamada de função
     
 PAUSE    
 end program nome_programa
+~~~
 
-! ----------------------- Declaração de funções e procedimentos
+~~~Fortran
+! ----------------------- Declaração de funções e procedimentos (externas)
+! Função
 function somar(a, b)
     implicit none
     somar = a + b
 end function somar
 
+! Procedimento
 subrotine dizer_bomDia( n )
     implicit none
     write(*,*) "Bom dia ", n , " !!! "
@@ -289,6 +295,66 @@ end select
              end do k_repetir
          end do j_repetir
      end do i_repetir
+~~~
+
+
+#### Funções e Procedimentos
+* Intenção dos Argumento
+| Valor | Como usa      | Descrição                 |
+|---    |---            |---                        |
+| in    | intent(in)    |não altera dentro da função|
+| out   | intent(out)   |altera o valor no argumento|
+| inout | intent(inout) | ambos                     |
+
+* Procediemntos externos (ao código)
+~~~Fortran
+   real :: x, y, z, DISCRIMINANTE
+   
+   a = 1.0
+   b = 5.0
+   c = 2.0   
+   
+   call = calcular_discriminante(a, b, c, DISCRIMINANTE)
+   
+   print*, discriminante
+~~~
+
+~~~Fortran
+subroutine calcular_discriminante (x, y , z, d)     
+   implicit none           
+   real, intent (in)  :: x  ! valor de a (entrada)   
+   real, intent (in)  :: y  ! valor de b (entrada)  
+   real, intent (in)  :: z  ! valor de c (entrada) 
+   real, intent (out) :: d  ! valor do DISCRIMINANTE (saída)  
+                            ! valores para d, serão atribuidos no DISCRIMINANTE
+   d = y**2 - 4.0 * x * z 
+   
+end subroutine calcular_discriminante    
+~~~
+
+* Procedimentos Interno (ao código)
+~~~Fortran
+program meu_programa
+    implicit none
+    integer :: a, b
+    
+    call somar(a,b)
+    
+ CONTAINS
+    subroutine somar(x,y)
+        integer :: x, y
+        somar = x + y
+    end subroutine somar
+
+end program meu_programa
+~~~
+
+* Recursão
+~~~Fortran
+recursive function minha_função (x)
+    ! conteudo com a chamada minha_função(y)
+end function minha_função
+
 ~~~
 
 #### Livrarias
