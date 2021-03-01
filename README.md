@@ -16,25 +16,54 @@ Repositório com estudos realizados sobre a linguagem FORTRAN.
 # Sintaxe
 #### Estrutura básica
 ~~~fortran
-! Programa principal
+! ----------------------- Programa Principal
 program nome_programa
-    implicit none      
+    implicit none 
+    
     ! declaração de tipos e variáveis
+    integer x, y
+    
     ! instruções executáveis
+    call somar(x,y)
+    
 PAUSE    
 end program nome_programa
 
-! Declaração de funções e procedimentos
+! ----------------------- Declaração de funções e procedimentos
+function somar(a, b)
+    implicit none
+    somar = a + b
+end function somar
 
+subrotine dizer_bomDia( n )
+    implicit none
+    write(*,*) "Bom dia ", n , " !!! "
+end subrotine dizer_bomDia
 ~~~
 
-#### Variaveis
+#### Variáveis
 ~~~Fortran
-    integer :: idade  	
-    real :: media 
-    complex :: num_complexo  
-    logical :: logico 
+    integer(kind=2)
+    integer(kind=4)
+    integer
+    integer(kind=8)
+    integer(kind=16)
+    
+    
+    real                :: salario 
+    double precision    :: me 
+    complex             :: num_complexo  
+    logical             :: logico 
     character(len = 80) :: texto
+    
+    !função kind(variavel)
+    !informa o tipo da variavel
+    
+    texto = "abcdef"
+    print*, texto(1:3) ! escreve abc
+    
+    !função trim(texto)
+    !exclui espaço em branco no meio do texto
 ~~~
 
 
