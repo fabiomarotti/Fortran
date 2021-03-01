@@ -158,6 +158,7 @@ listaPessoas(2)%idade   = 38
 #### Operadores
 
 * Operador Aritmético
+
 |Operador   |Equivalente    | 
 |---        |---            |
 | +         | Soma          |
@@ -167,6 +168,7 @@ listaPessoas(2)%idade   = 38
 | **        | Potencia      |
 
 * Operador Relacional
+
 |Operador   |Equivalente    | Descrição     |
 |---        |---            |---            |
 | ==        | .EQ.          | Igualdade     |
@@ -177,6 +179,7 @@ listaPessoas(2)%idade   = 38
 | <=        | .LE.          | Menor igual   |
 
 * Operador Lógico
+
 |Operador   |Descrição      | 
 |---        |---            |
 | .AND.     |  E            |
@@ -185,7 +188,8 @@ listaPessoas(2)%idade   = 38
 | .EQV.     | Equivalência entre dois operadores lógicos     |
 | .NEQV.    | Não Equivalência entre dois operadores lógicos |
 
-Precedencia dos Operadores
+* Precedencia dos Operadores
+
 |Categoria                      |Operador          | Associativa              |
 |---                            |---                |---                      |
 | Não lógico e sinal negativo   | .NOT. , (-)       | Esquerda para direita   |
