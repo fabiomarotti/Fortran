@@ -165,14 +165,14 @@ listaPessoas(2)%idade   = 38
 | -         | Subtração     |
 | *         | Multiplicação |
 | /         | Divisão       |
-| **        | Potencia      |
+| **        | Potência      |
 
 * Operador Relacional
 
 |Operador   |Equivalente    | Descrição     |
 |---        |---            |---            |
 | ==        | .EQ.          | Igualdade     |
-| /=        | .NE.          | Diferente     |
+| /=        | .NE.          | Diferença     |
 | >         | .GT.          | Maior que     |
 | <         | .IT.          | Menor que     |
 | >=        | .GE.          | Maior igual   |
@@ -283,12 +283,16 @@ end select
     do i=1, 10
         ! faça
     end do
-    
+~~~
+
+~~~Fortran
     ! DO WHILE
     do while(x > 2)
         ! faça
     end do
-    
+~~~
+
+~~~Fortran
     ! DO rotulado
     i_repetir: do i=1, 10
         j_repetir: do j=1, 10
