@@ -233,6 +233,7 @@ Formatação
 
 
 #### Estruturas de Decisão
+* IF - THEN - ELSE - END IF
 ~~~Fortran
 ! Estrtrutura IF - THEN - ELSE - END IF
 if (x > 2) then
@@ -247,7 +248,10 @@ if (x > 2) then
 gr: if( x>2 ) then
        !fazer01
     enf if gr
-    
+~~~
+
+* SELECT CASE
+~~~Fortran
 select case(nota)
     case(10)
     ! faça para 10
@@ -261,6 +265,30 @@ select case(nota)
     case default
     ! faça caso contrario
 end select
+~~~
+
+#### Estrutura de Repetição
+~~~Fortran
+    ! DO simples
+    do i=1, 10
+        ! faça
+    end do
+    
+    ! DO WHILE
+    do while( x>2 )
+        ! faça
+    end do
+    
+    ! DO rotulado
+    i_repetir: do i=1, 10
+        j_repetir: do j=1, 10
+            k_repetir: do k=1, 10
+            
+                ! fazer print*, "(i, j, k): ", i, j, k
+               
+             end do k_repetir
+         end do j_repetir
+     end do i_repetir
 ~~~
 
 #### Livrarias
