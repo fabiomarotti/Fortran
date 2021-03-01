@@ -15,11 +15,16 @@ Repositório com estudos realizados sobre a linguagem FORTRAN.
 
 # Sintaxe
 ~~~fortran
-program *nome_programa* 
+! Programa principal
+program nome_programa
     implicit none      
     ! declaração de tipos e variáveis
     ! instruções executáveis
-end program *nome_programa*
+PAUSE    
+end program nome_programa
+
+! Declaração de funções e procedimentos
+
 ~~~
 
 
