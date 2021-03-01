@@ -80,11 +80,11 @@ end subrotine dizer_bomDia
 
 #### Arrays (DIMENSION)
 ~~~Fortran
-    integer,    dimension (3)        :: idades
-    real,       dimension (4)        :: medias
-    integer,    dimension (3,3)      :: matriz_idades   ! matriz 3x3
-    real,       dimension (2:6)      :: numbers
-    integer,    dimension (-3:2,0:4) :: matrix  
+    integer ,   dimension (3)        :: idades
+    real    ,   dimension (4)        :: medias
+    integer ,   dimension (3,3)      :: matriz_idades   ! matriz 3x3
+    real    ,   dimension (2:6)      :: numbers
+    integer ,   dimension (-3:2,0:4) :: matrix  
 
     ! Atribuição de modo curto
     medias = (/ 1.5, 28, 3.14/)
@@ -120,8 +120,6 @@ end subrotine dizer_bomDia
    write(*,10) y
    
    10 format(1x,6f6.1)
-   
-   
 ~~~ 
 
 * Funçoes de Localização para Arrays
@@ -155,6 +153,7 @@ listaPessoas(1)%idade   = 28
 listaPessoas(2)%nome    = "Ciclano"
 listaPessoas(2)%idade   = 38
 ~~~
+
 #### Operadores
 
 * Operador Aritmético
@@ -238,7 +237,6 @@ write   fmt, variavel
 
         print 200, nome,   idade,     nascimento
 200     format(1x,    a, 2x,  i3, 2x,       f5.2)  
-
 ~~~
 
 
@@ -280,6 +278,7 @@ end select
 #### Estrutura de Repetição
 ~~~Fortran
     ! DO simples
+    
     do i=1, 10
         ! faça
     end do
@@ -287,6 +286,7 @@ end select
 
 ~~~Fortran
     ! DO WHILE
+    
     do while(x > 2)
         ! faça
     end do
@@ -294,6 +294,7 @@ end select
 
 ~~~Fortran
     ! DO rotulado
+    
     i_repetir: do i=1, 10
         j_repetir: do j=1, 10
             k_repetir: do k=1, 10
@@ -373,13 +374,15 @@ end function minha_função
     BLAS
     EISPACK
     GAMS–NIST Guide to Available Math Software
-    Some statistical and other routines from NIST
+ 
+ Some statistical and other routines from NIST
     LAPACK
     LINPACK
     MINPACK
     MUDPACK
     NCAR Mathematical Library
-    The Netlib collection of mathematical software, papers, and databases.
+
+The Netlib collection of mathematical software, papers, and databases.
     ODEPACK
     ODERPACK, a set of routines for ranking and ordering.
     Expokit for computing matrix exponentials
