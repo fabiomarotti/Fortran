@@ -98,7 +98,20 @@ end subrotine dizer_bomDia
 
 #### Funções Intrinsicas
 
-| função | Descrição |
-|---|---|
-|abs(x)| media|
+| Função    | Descrição do retorno :: (radianos)    |
+|---        |---            |
+|sin(x)     | seno                                  |
+|sinh(x)    |seno hiperbolico                       |
+|asin(x)    |arco seno: intervalo (-pi/2 , pi/2)    |
+|cos(x)     |cosseno                                |
+|cosh(x)    |cosseno hiperbolico                    |
+|acos(x)    |arco cosseno: intervalo (0 ,  pi )     |
+|tan(x)     |tangente                               |
+|tanh(x)    |tangente hiperbolica                   |
+|atan(x)    |arco tangente: intervalo (-pi/2 , pi/2)|
+|atan2(x)   |arco tangente: intervalo (-pi , pi)    |
+|log(x)     |logaritmo Natural (base e)             |
+|log10(x)   |logaritmo         (base 10)            |
+|exp()      |retorna o expoente do número           |
+
 
