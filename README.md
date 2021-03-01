@@ -14,6 +14,7 @@ Repositório com estudos realizados sobre a linguagem FORTRAN.
 - [Hans Rogério](https://github.com/zrhans/Fortran)
 
 # Sintaxe
+#### Estrutura básica
 ~~~fortran
 ! Programa principal
 program nome_programa
@@ -25,6 +26,15 @@ end program nome_programa
 
 ! Declaração de funções e procedimentos
 
+~~~
+
+#### Variaveis
+~~~Fortran
+    integer :: idade  	
+    real :: media 
+    complex :: num_complexo  
+    logical :: logico 
+    character(len = 80) :: texto
 ~~~
 
 
