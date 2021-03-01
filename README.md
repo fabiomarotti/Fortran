@@ -71,9 +71,83 @@ end subrotine dizer_bomDia
     ! função trim(texto)
     ! exclui espaço em branco no meio do texto
 ~~~
+
+#### Arrays (DIMENSION)
+~~~Fortran
+    integer,    dimension (3)        :: idades
+    real,       dimension (4)        :: medias
+    integer,    dimension (3,3)      :: matriz_idades   ! matriz 3x3
+    real,       dimension (2:6)      :: numbers
+    integer,    dimension (-3:2,0:4) :: matrix  
+
+    ! Atribuição de modo curto
+    medias = (/ 1.5, 28, 3.14/)
+~~~
+
+* Funções de Informações das Matrizes
+~~~Fortran
+   real, dimension(3,2) :: a 
+   a = reshape( (/5,9,6,10,8,12/), (/3,2/) ) 
+   
+   Print *, lbound(a, dim = 1)  ! retorna o limite superior da dimensão, sem dim: retorna vetor inteiro
+   Print *, ubound(a, dim = 1)  ! retorna o limite inferior da dimensão (pode ser negativo)
+   Print *, shape(a)            ! dimensão da matriz
+   Print *, size(a,dim = 1)     ! número elementos da determinada dimensão
+~~~  
+* Funções de Manipulações das Matrizes
+~~~Fortran
+real, dimension(1:6) :: a = (/ 21.0, 22.0, 23.0, 24.0, 25.0, 26.0 /)
+   real, dimension(1:6) :: x, y
+   write(*,10) a
+   
+   ! soma/subtrai o valor de shift em todos os campos
+   x = cshift ( a, shift = 2)
+   write(*,10) x
+   y = cshift (a, shift = -2)
+   write(*,10) y
+   
+   ! desloca todos os elementos (+: esquerda) (-: direita)
+   x = eoshift ( a, shift = 2)
+   write(*,10) x   
+   y = eoshift ( a, shift = -2)
+   write(*,10) y
+   
+   10 format(1x,6f6.1)
+~~~ 
+* Funçoes de Localização para Arrays
+~~~Fortran
+   real, dimension(1:6) :: a = (/ 21.0, 12.0,33.0, 24.0, 15.0, 16.0 /)
+   Print *, maxloc(a)       ! retorna a posição do maximo local :3
+   Print *, minloc(a)       ! retorna a posição do mínimo local :2
+~~~
+
+#### Tipos (Estrutura, Classe)
+~~~Fortran
+! Declaração
+type    Pessoa
+    character(len=50)   ::  nome
+    integer             ::  idade
+end type Pessoa
+
+! Instância do Tipo/Estrutura/Classe
+type(Pessoa) :: p01
+type(Pessoa) :: p02
+type(PEssoa), dimension(2) :: listaPessoas
+
+! manipulando
+p01%nome    = "Fulano"
+p01%idade   = 28
+p02%nome    = "Ciclano"
+p02%idade   = 38
+
+listaPessoas(1)%nome    = "Fulano"
+listaPessoas(1)%idade   = 28
+listaPessoas(2)%nome    = "Ciclano"
+listaPessoas(2)%idade   = 38
+~~~
 #### Operadores
 
-|Operador Aritmético|
+Operador Aritmético
 |Operador   |Equivalente    | 
 |---        |---            |
 | +         | Soma          |
