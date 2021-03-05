@@ -193,7 +193,7 @@ listaPessoas(2)%idade   = 38
 | .OR.              | OU            |
 | .NOT.             | Não           |
 | .EQV.             | Equivalência entre dois operadores lógicos               |
-| .NEQV. ou .XOR.   | Desigualdade logica, true: se somente um do sop for true |
+| .NEQV. ou .XOR.   | Desigualdade logica, true: se somente um dos op for true |
 
 * Precedencia dos Operadores
 
