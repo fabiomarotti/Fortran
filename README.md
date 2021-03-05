@@ -181,7 +181,7 @@ listaPessoas(2)%idade   = 38
 | ==        | .EQ.          | Igualdade     |
 | /=        | .NE.          | Diferença     |
 | >         | .GT.          | Maior que     |
-| <         | .IT.          | Menor que     |
+| <         | .LT.          | Menor que     |
 | >=        | .GE.          | Maior igual   |
 | <=        | .LE.          | Menor igual   |
 
@@ -194,6 +194,13 @@ listaPessoas(2)%idade   = 38
 | .NOT.             | Não           |
 | .EQV.             | Equivalência entre dois operadores lógicos               |
 | .NEQV. ou .XOR.   | Desigualdade logica, true: se somente um dos op for true |
+
+* Valores Lógicos
+
+|Valores           |Descrição      | 
+|---               |---            |
+| .TRUE. ou .T.    |  Veradeiro    |
+| .FALSE. ou .F.   | Falso         |
 
 * Precedencia dos Operadores
 
