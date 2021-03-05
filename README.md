@@ -92,8 +92,14 @@ end subrotine dizer_bomDia
     real    ,   dimension (4)        :: medias
     integer ,   dimension (3,3)      :: matriz_idades   ! matriz 3x3
     real    ,   dimension (2:6)      :: numbers
+    
     integer ,   dimension (-3:2,0:4) :: matrix  
+    
+    double precision    var(1:3)      ! indices: 1,2,3
+    double precision    var(0:3)      ! indices: 0,1,2
+    character           var(1:40)*30  ! vetor de 40 posições com 30 letras cada 
 
+    double precision    var(1:2 , 1:3) ! matriz 2x3 ( linha,coluna)
     ! Atribuição de modo curto
     medias = (/ 1.5, 28, 3.14/)
 ~~~
