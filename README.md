@@ -60,10 +60,13 @@ end subrotine dizer_bomDia
     
     real                :: salario 
     double precision    :: media 
+    double precision       x, y, z
     
     complex             :: num_complexo  
     logical             :: logico 
     character(len = 80) :: texto
+    character              nome*80
+    
     
     texto = "abcdef"
     print*, texto(1:3) ! escreve abc
@@ -77,7 +80,12 @@ end subrotine dizer_bomDia
     ! função trim(texto)
     ! exclui espaço em branco no meio do texto
 ~~~
-
+~~~Fortran
+  ! abreviando a escrita
+  ! 'd0' abrevia as casas decimais
+  1.2d0
+  
+~~~
 #### Arrays (DIMENSION)
 ~~~Fortran
     integer ,   dimension (3)        :: idades
@@ -179,13 +187,13 @@ listaPessoas(2)%idade   = 38
 
 * Operador Lógico
 
-|Operador   |Descrição      | 
-|---        |---            |
-| .AND.     |  E            |
-| .OR.      | OU            |
-| .NOT.     | Não           |
-| .EQV.     | Equivalência entre dois operadores lógicos     |
-| .NEQV.    | Não Equivalência entre dois operadores lógicos |
+|Operador           |Descrição      | 
+|---                |---            |
+| .AND.             |  E            |
+| .OR.              | OU            |
+| .NOT.             | Não           |
+| .EQV.             | Equivalência entre dois operadores lógicos               |
+| .NEQV. ou .XOR.   | Desigualdade logica, true: se somente um do sop for true |
 
 * Precedencia dos Operadores
 
@@ -400,21 +408,35 @@ The Netlib collection of mathematical software, papers, and databases.
 
 #### Funções Intrinsicas
 
-| Função    | Descrição do retorno :: (radianos)    |
-|---        |---                                    |
-|sin(x)     | seno                                  |
-|sinh(x)    |seno hiperbolico                       |
-|asin(x)    |arco seno: intervalo (-pi/2 , pi/2)    |
-|cos(x)     |cosseno                                |
-|cosh(x)    |cosseno hiperbolico                    |
-|acos(x)    |arco cosseno: intervalo (0 ,  pi )     |
-|tan(x)     |tangente                               |
-|tanh(x)    |tangente hiperbolica                   |
-|atan(x)    |arco tangente: intervalo (-pi/2 , pi/2)|
-|atan2(x)   |arco tangente: intervalo (-pi , pi)    |
-|log(x)     |logaritmo Natural (base e)             |
-|log10(x)   |logaritmo         (base 10)            |
-|exp(x)      |retorna o expoente do número          |
+| Função    | Descrição do retorno :: (radianos)      |
+|---        |---                                      |
+|sin(x)     |seno                                     |
+|sinh(x)    |seno hiperbolico                         |
+|asin(x)    |arco seno: intervalo (-pi/2 , pi/2)      |
+|cos(x)     |cosseno                                  |
+|cosh(x)    |cosseno hiperbolico                      |
+|acos(x)    |arco cosseno: intervalo (0 ,  pi )       |
+|tan(x)     |tangente                                 |
+|tanh(x)    |tangente hiperbolica                     |
+|atan(x)    |arco tangente: intervalo (-pi/2 , pi/2)  |
+|atan2(x)   |arco tangente: intervalo (-pi , pi)      |
+| -         | -                                       |
+|dble(x)    |converte x para dupla precisão (real)    |
+|float(x)   |conversão de inteiro para real           |
+|cmplx(x)   |conversão para complexo                  |
+|sign(x,y)  |retorna +x, se y>=0 e -x , se y<0        |
+|ifix(x)    |conversão de real para inteiro, truncado |
+|mod(x,y)   |resto da divisão de x por y (inteiro)    |
+|amod(x,y)  |resto da divisão de x por y (real)       |
+|log(x)     |logaritmo Natural (base e)               |
+|log10(x)   |logaritmo         (base 10)              |
+|alog(x)    |logaritmo Natural (base e)  (real)       |
+|alog10(x)  |logaritmo         (base 10) (real)       |
+|exp(x)     |retorna o expoente do número             |
+|sqrt(x)    | raiz quadrada de x (real)               |
+|dsqrt(x)   | raiz quadrada de x                      |
+|abs(x)     | valor absoluto de x (real)              |
+|iabs(x)    | valor absoluto de x (inteiro)           |
 
 continuar em: https://www.tutorialspoint.com/fortran/fortran_intrinsic_functions.htm
 continuar em: https://wp.ufpel.edu.br/diehl/files/2018/02/f90_lec15.pdf (Interfaces)
